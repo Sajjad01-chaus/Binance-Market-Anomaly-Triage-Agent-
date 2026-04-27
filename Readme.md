@@ -71,6 +71,10 @@ flowchart TD
 ```
 
 ---
+###  Sample Evaluation Run
+
+![Evaluation Output](result_ss.png)
+
 
 ## 3. Design Tradeoffs
 
@@ -90,7 +94,8 @@ flowchart TD
 
 ---
 
-## 📊 4. Benchmarking: Speed vs Intelligence
+
+## 4. Benchmarking: Speed vs Intelligence
 
 | Model         | Latency | Accuracy | Noise Reduction | Insight             |
 | ------------- | ------- | -------- | --------------- | ------------------- |
@@ -105,7 +110,7 @@ flowchart TD
 
 ---
 
-## 🆚 5. Claude vs FDE Agent Comparison
+## 5. Claude vs FDE Agent Comparison
 
 | Market Event Context       | Expected Action | Baseline Claude | FDE Agent         |
 | -------------------------- | --------------- | --------------- | ----------------- |
@@ -125,7 +130,7 @@ flowchart TD
 
 ---
 
-## 📈 6. Performance Metrics (10,000 Score)
+## 6. Performance Metrics (10,000 Score)
 
 ### Scoring Formula:
 
@@ -145,7 +150,7 @@ flowchart TD
 
 ---
 
-## ⚠️ 7. Limitations & Production Path
+## 7. Limitations & Production Path
 
 * Dataset = 6 curated edge cases
 * Designed for **fast evaluation**, not scale
@@ -160,7 +165,7 @@ flowchart TD
 
 ---
 
-## 🚀 8. Quick Start
+## 8. Quick Start
 
 ### Requirements
 

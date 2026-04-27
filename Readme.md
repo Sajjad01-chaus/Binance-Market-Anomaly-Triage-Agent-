@@ -34,12 +34,13 @@ This gives understanding and demonstrates:
 
 ## 2. System Architecture
 
+
 ```mermaid
 flowchart TD
 
     A[Market Event Input] --> B[Prompt Construction]
 
-    B --> C[LLM Decision Engine<br/>(Groq / GPT Model)]
+    B --> C["LLM Decision Engine (Groq / GPT Model)"]
 
     C --> D[Raw JSON Output]
 

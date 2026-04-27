@@ -1,5 +1,27 @@
 # Cursor FDE Agent Rules
-1. ALWAYS use Pydantic for data validation when interacting with LLMs to ensure deterministic JSON outputs.
-2. NEVER commit API keys or secrets to the repository. Rely strictly on `python-dotenv` for environment variables.
-3. Prioritize execution speed, noise reduction, and latency over raw model size. Default to Groq + Llama 3 8B for inference.
-4. If modifying the evaluation pipeline, ensure the metrics output a quantifiable FDE score out of 10,000 based on accuracy (60%), latency (20%), and noise reduction (20%).
+
+1. ALWAYS validate LLM outputs using structured schemas (Pydantic) to ensure deterministic JSON responses.
+
+2. NEVER commit API keys or secrets. Use environment variables via python-dotenv.
+
+3. PRIORITIZE decision intelligence over raw generation:
+   - Evaluate relevance before any response
+   - Assign priority (LOW, MEDIUM, HIGH)
+   - Decide action (IGNORE, ALERT_ANALYST, EXECUTE_TRADE)
+
+4. OPTIMIZE for high-noise environments:
+   - Filter low-value inputs aggressively
+   - Minimize unnecessary responses (noise reduction)
+
+5. PRIORITIZE latency and efficiency over model size:
+   - Prefer fast inference (e.g., Groq / lightweight models)
+   - Target sub-second decision time
+
+6. EVALUATION must output a score out of 10,000 based on:
+   - Accuracy (60%)
+   - Noise Reduction (20%)
+   - Latency (20%)
+
+7. AVOID unnecessary infrastructure complexity:
+   - Focus on decision logic, not distributed systems
+   - Keep the system lightweight and testable
